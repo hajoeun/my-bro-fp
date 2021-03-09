@@ -1,24 +1,14 @@
-// 함수형 프로그래밍의 기본은 '논리 꼬집기'다
+// flow, curry
 
-const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// _.each(list, v => console.log(v));
+// const swapDisplayOrder = (index1, index2) => {
+//   const swaped = swapItems(editedData, index1, index2);
 //
-const isEven = v => v % 2 === 0;
-const add = (a, b) => a + b;
+//   setEditedData(mapDisplayOrder(swaped));
+// };
 
-// console.log(
-//   _.reject(isEven)(list),
-// );
+// flow, curry라는 함수의 개념을 익힌다.
+// flow, curry를 사용해서 위의 코드를 재구성해본다.
+// flow, curry 함수를 직접 만들어본다.
 
-_.pipe(
-  _.map(v => v + 1),
-  _.filter(isEven),
-  _.hi,
-  // _.reduce(add),
-  sum => console.log(sum),
-  _.always(10),
-  v => console.log(v),
-)(list);
-
-
+// flow 쓰는 방법
+//    1. 변수 선언을 없앤다. 2. 함수 실행 순서대로 나열한다. 3. 인자를 넣어준다.
